@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 postgrex_config = [
   username: "postgres",
