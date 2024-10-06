@@ -2,7 +2,7 @@ import Config
 
 postgrex_config = [
   username: "postgres",
-  password: "",
+  password: "postgres",
   database: "rihanna_db",
   hostname: "127.0.0.1",
   port: 5432
@@ -14,7 +14,7 @@ config :rihanna,
   debug: true
 
 # config :logger, level: :debug
-config :logger, level: :warn
+config :logger, level: :warning
 
 if Mix.env() == :test do
   config :rihanna, ecto_repos: [TestApp.Repo]

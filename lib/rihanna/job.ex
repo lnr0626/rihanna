@@ -577,7 +577,7 @@ defmodule Rihanna.Job do
         job_module.after_error(reason, arg)
       rescue
         exception ->
-          Logger.warn(
+          Logger.warning(
             """
             [Rihanna] After error callback failed
             Got an unexpected error while trying to run the `after_error` callback.
@@ -606,7 +606,7 @@ defmodule Rihanna.Job do
         job_module.retry_at(reason, arg, attempts || 0)
       rescue
         exception ->
-          Logger.warn(
+          Logger.warning(
             """
             [Rihanna] retry_at/4 callback failed
             Got an unexpected error while trying to run the `retry_at` callback.
